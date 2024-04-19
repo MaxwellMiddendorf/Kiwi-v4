@@ -2,7 +2,7 @@ file_format: "1"
 id: kiwi-v4
 name: kiwi-v4
 type: shield
-url: https://github.com/zmkfirmware
+url: https://github.com/MaxwellMiddendorf/Kiwi-v4/ 
 requires: [pro_micro]
 features:
   - keys
