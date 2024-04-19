@@ -1,0 +1,84 @@
+units:
+  pcb_thickness: 1.6
+  cx: 18 # 18mm Choc X spacing
+  cy: 17 # 17mm Choc Y spacing
+  Xspread: cx + .05
+  Yspread: cy + .05
+  $default_height: 'cy-1'
+  $default_width: 'cx-1'
+
+
+points:
+  key:
+    padding: cy + .05
+    footprints:
+      type: choc
+      params.keycaps: true
+
+  zones:
+    Consonants:
+      columns:
+        Outer:
+        Pinky:
+        Ring.key.stagger: .25cy
+        Middle.key.stagger: .25cy
+        Index.key.stagger: -.25cy
+        Inner:
+      rows:
+        Bottom:
+        Top:
+
+    Vowels:
+      anchor:
+        ref: Consonants_Inner_Bottom
+        shift: [0, -1.25cy]
+        rotate: -8
+      columns:
+        Outer:
+        Inner:
+      rows.Row:
+  mirror: 180
+
+outlines:
+  key-bindings:
+    - where: true
+      what: rectangle
+      size: [1.5cx, 1.5cy]
+
+  keyholes:
+    - where: true
+      what: rectangle
+      size: [cx, cy]
+    
+  mcu-mount:
+    - where:
+        ref: Consonants_Inner_Bottom
+        shift: [.5Xspread + 2.4, .5Yspread - .5]
+      what: rectangle
+      size: [2.5cx, 2.5cy + 1]
+
+  plate:
+    [key-bindings, mcu-mount]
+
+  outline:
+    - what: outline
+      name: plate
+      fillet: 2
+
+
+
+pcbs:
+  kiwi:
+    outlines:
+      main:
+        outline: outline
+    footprints:
+      keys:
+        what: choc
+        where: true
+        params:
+          from: GND
+          to: "{{column_net}}"
+          keycaps: true
+          reverse: false
+          hotswap: true
