@@ -2,7 +2,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: MaxwellMiddendorf/Kiwi-v4/.github/workflows/build-user-config.yml
+    uses: MaxwellMiddendorf/Kiwi-v4/.github/actions/build-actions/build-user-config.yml
     with:
       build_matrix_path: "config/build.yaml"
     
