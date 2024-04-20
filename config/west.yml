@@ -1,6 +1,6 @@
 manifest:
   remotes:
-    - name: maxwellmiddendorf 
+    - name: MaxwellMiddendorf 
       url-base: https://github.com/MaxwellMiddendorf/ 
   projects:
     - name: kiwi-v4
