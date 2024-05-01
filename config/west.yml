@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: kiwi-v4
       remote: origin
-      revision: main
+      revision: master 
       import: config/zmk/app/west.yml
   self:
     path: config
