@@ -6,6 +6,6 @@ manifest:
     - name: kiwi-v4
       remote: origin
       revision: master 
-      import: config/zmk/app/west.yml
+      import: config/zmk-west.yml
   self:
     path: config
