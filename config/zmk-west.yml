@@ -30,4 +30,4 @@ manifest:
 		  - edtt
 		  - trusted-firmware-m
   self:
-	west-commands: scripts/west-commands.yml
+	west-commands: west-commands.yml
