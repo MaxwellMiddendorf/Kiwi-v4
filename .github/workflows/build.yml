@@ -2,6 +2,6 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: ./config/zmk/.github/workflows/build-user-config.yml@main
+    uses: MaxwellMiddendorf/Kiwi-v4/config/zmk/.github/workflows/build-user-config.yml@main
     with:
       build_matrix_path: "config/build.yaml"
