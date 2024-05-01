@@ -1,4 +1,7 @@
 manifest:
+  remotes:
+    - name: origin 
+      url-base: https://github.com/MaxwellMiddendorf/Kiwi-v4.git 
   projects:
     - name: kiwi-v4
       remote: origin
