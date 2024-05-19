@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: origin 
-      url-base: https://github.com/MaxwellMiddendorf
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
-    - name: kiwi-v4
-      remote: origin
-      revision: master 
-      import: config/zmk/app/west.yml 
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
   self:
     path: config
